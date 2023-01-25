@@ -1,3 +1,7 @@
 this is a test
 this new line
+<<<<<<< HEAD
 1111
+=======
+this new End
+>>>>>>> ad89c9463308788a573c6d9ec923c51b2eaeff96

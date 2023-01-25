@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="pad"></div>
+        <script>
+            const pad=document.getElementById("pad")
+            const url='http://220.168.65.178:9000/book/bfkz-1.asp'
+            var xhr=new XMLHttpRequest()
+            xhr.open('GET',url)
+
+            xhr.onload=function(){
+                //console.log(xhr.response)
+                pad.innerHTML=xhr.response
+
+            }
+
+            xhr.onerror=function(){
+                //console.log('error')
+                pad.innerHTML=xhr.response
+            }
+            xhr.send()
+            
+            fetch(url).then(
+                function(response){
+                   // console.log(response.text)
+                   pad.innerHTML=response
+                })
+
+        </script>
+    </body>
+</html>
